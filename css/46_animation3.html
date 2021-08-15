@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 60px;
+            animation: animation_rotate 3s infinite, animation_background 3s infinite;
+        }
+        @keyframes animation_rotate {
+            from {
+                transform: rotateX(0deg) rotateY(0deg) perspective(150px);
+            }
+            50% {
+                transform: rotateX(-180deg) rotateY(0deg) perspective(150px);
+            }
+            100% {
+                transform: rotateX(0deg) rotateY(-180deg) perspective(150px);
+            }
+        }
+        @keyframes animation_background {
+            from {background-color: yellowgreen;}
+            50% {background-color: green;}
+            100% {background-color: indianred;}
+        }
+    </style>
+</head>
+<body>
+    <!-- perspective -->
+    <div class="box"></div>
+</body>
+</html>

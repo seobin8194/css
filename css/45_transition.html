@@ -1,0 +1,99 @@
+<!-- 
+    transition
+    요소에 추가할 css 스타일에 전환효과를 적용한다
+
+    transition-delay 전환효과가 나타나기전까지 지연시간을 설정. 설정된 시간이 흐른 뒤 전환이 시작된다 
+    transition-duration 전환효과가 지속될 시간을 설정
+    transition-property 요소에 추가할 전환효과를 설정
+    transition-timing-function 
+    : linear 전환효과가 처음부터 끝까지 일정한 속도로 진행
+      ease 기본값. 전환효과가 천천히 시작되고 그 다음에는 빨라지고 마지막에는 느려진다
+      ease-in 전화효과가 천천히 시작된다
+      ease-out 전환효과가 천천히 끝난다
+      ease-in-out 전화효과가 천천히 시작되고 천천히 끝난다
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 30px;
+        }
+        #bg-tr {
+            background-color: darkorange;
+            transition: all linear 5s;
+            /* transition: all ease 8s; */
+            /* transition: all ease-in 5s; */
+            /* transition: all ease-out 5s;
+            transition: all ease-in-out 5s; */
+        }
+        #border-tr {
+            background-color: darkslategrey;
+            border: 3px solid black;
+            /* border만 변환된다 */
+            transition: border linear 1.5s;
+            /* background-color border radius 모두 변환된다 */
+            transition: all linear 1.5s;
+        }
+        #bg-tr:hover {
+            background-color: yellowgreen;
+        }
+        #border-tr:hover {
+            background-color: yellowgreen;
+            border: 3px dotted black;
+            border-radius: 50%;
+        }
+
+        #ex {
+            clear: both;
+            width: 500px;
+            height: 150px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 30px;
+            border: 3px solid red; 
+        }
+        .box2 {
+            font-size: 12px;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: violet;
+        }
+        .box p {
+            padding-top: 5px;
+            font-weight: bold;
+        }
+        #ex:hover .box2 {
+            transform: rotate(720deg);
+            margin-left: 450px;
+            transition-duration: 3s;
+        }
+        #no-delay {
+            border: 1px solid red;
+        }
+        #delay {
+            border: 1px solid blue;
+            transition-delay: 1s;
+        }   
+    </style>
+</head>
+<body>
+    <div id="bg-tr" class="box1"></div>
+    <div id="border-tr" class="box1"></div>
+
+    <!-- transition-delay -->
+    <div id="ex">
+        <div id="no-delay" class="box2"><p>no-delay</p></div>
+        <div id="delay" class="box2"><p>delay</p></div>
+    </div>
+</body>
+</html>

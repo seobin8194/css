@@ -1,0 +1,50 @@
+<!-- 
+    clear
+    float 속성이 적용된 이후 나타나는 요소들의 동작을 조절
+    컨테이너 요소에 float속성이 적용되면 그 이후에 등장하는 모든 요소들은 정학한 위치를 설정하기 어렵다
+    따라서 float속성을 작용하고자하는 요소가 모두 등장한 이후에는 clear속성을 사용하여 이후에 등장하는 요소들이 더이상 float속성의 영향을 받지 않도록 설정
+    -> float를 적용한 요소 옆에 공간이 조금이라도 있으면 아래있는 요소가 비집고 올라오는 것을 방지
+
+    both : 좌측 우측 float속성 무효화
+    left : 좌측 float속성 무효화
+    right : 우측 float속성 무효화
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         body {
+             margin: 20px 30px;
+             /* max-margin : 요소의 크기가 커져보하야 800 */
+             max-width: 800px;
+         }
+         p {
+             padding: 10px;
+             text-align: justify;
+             font-size: 15px;
+         }
+         #p1 {
+             float: left;
+             width: 38%;
+             background-color: darkgoldenrod;
+         }
+         #p2 {
+             float: right;
+             width: 54%;
+             background-color: darkgreen;
+         }
+         #p3 {
+             clear: both;
+             background-color: darkorchid;
+         }
+     </style>
+ </head>
+ <body>
+     <div id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate qui quo ipsam sunt consectetur, debitis obcaecati excepturi ratione autem, quam exercitationem amet nihil ipsum voluptates libero corrupti blanditiis earum! Recusandae.</div>
+     <div id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate qui quo ipsam sunt consectetur, debitis obcaecati excepturi ratione autem, quam exercitationem amet nihil ipsum voluptates libero corrupti blanditiis earum! Recusandae.</div>
+     <div id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate qui quo ipsam sunt consectetur, debitis obcaecati excepturi ratione autem, quam exercitationem amet nihil ipsum voluptates libero corrupti blanditiis earum! Recusandae.</div>
+ </body>
+ </html>

@@ -1,0 +1,64 @@
+<!-- 
+    테이블 테두리 설정하기
+    테이블 요소의 스타일을 설정할 수 있다
+    table tr th td 요소에 스타일을 주는 방법은 동일하다
+    하지만 table 요소에만 들어가는 border관련 속성이 있다
+    -> border-collapse
+       테이블 셀간의 공백을 처리할지 여부를 결정하는 속성
+       separate : 셀들을 분리시켜 이에 공백을 만든다 -> table 테두리가 2줄로 보인다. 기본값
+       collapse : 셀들을 합쳐서 사이의 공백을 없앤다 -> table 테두리가 1줄로 보인다 
+
+       vertical-align
+       :테이블의 텍스트의 세로 정렬을 지정
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         body {
+             font-family: "맑은 고딕";
+         }
+         table {
+             border-collapse: collapse;
+             width: 600px;
+             /* 테이블 겉을 감싸는 전체 테두리 */
+             border: 3px solid violet  
+         }
+         th, td {height: 40px;}
+         th {
+             border: 2px solid turquoise;
+             vertical-align: top;
+         }
+         td{ text-align: center;}
+         #title {
+             font-weight: bold;
+             line-height: 70px;
+         }
+     </style>
+ </head>
+ <body>
+     <!-- 셀을 나누는 선이 표시된다 -->
+     <table border="1">
+         <caption id="title">브라우저</caption>
+         <tr>
+             <th>개발사</th>
+             <th>브라우저</th>
+         </tr>
+         <tr>
+             <td>구글</td>
+             <td>크롬</td>
+         </tr>
+         <tr>
+             <td>마이크로소프트</td>
+             <td>엣지</td>
+         </tr>
+         <tr>
+             <td>애플</td>
+             <td>사파리</td>
+         </tr>
+     </table>
+ </body>
+ </html>

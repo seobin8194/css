@@ -1,0 +1,29 @@
+<!--
+    클래스선택자(.)
+    특정 집단의 여러 요소를 한번에 선택할때 사용
+    어떤 스타일을 주고 샆은 곳이 군데군데 있을때 그들을 클래스로 묶어서 한번에 적용
+    특정잡단을 클래스라 하며 "."기호를 이용하여 같은 클래스이름 가지는 요소들을 한번에 선택한다
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*요소와 관계없이 해당 클래스명을 가진 요소 선택*/
+        .red { color: red;}
+        .blue {color: blue;}
+        /*span요소중 클래스가 red인 요소 선택*/
+        span.red {color: darkred;}
+        .em {font-style: italic;}
+    </style>
+</head>
+<body>
+    <p>
+        <!--class="red em"은 red em클래스 이름을 의미하는게 아니고 class red와 class em 두개를 의미-->
+        <span class="red">특정집단</span>의 여러 요소를 한번에 선택할때 사용
+        <b class="red">특정잡단</b>을 <span class="red em">클래스</span>라 하며 <span class="blue">."기호</span>를 이용하여 같은 클래스이름 가지는 요소들을 한번에 선택한다
+    </p>  
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!--
+    인접형제선택자(+)
+    동일한 부모의 요소를 갖는 자식요소들간의 선후 관계는 "형-동생" 관계이고 "먼저 나온 요소-나중에 나온 요소"를 의미
+    a + li {color:red} -> a요소의 형제 중 바로 다음에 위치하는 동생 요소가 li인 경우 선택
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 + p {color: darkorange; background-color: darkred;}
+    </style>
+</head>
+<body>
+    <h2>인접형제선택자</h2>
+    <div>
+        <!--반드시 동생이여야 한다-->
+        <p>둘째</p>
+        <h3>첫째</h3>
+        <p>둘째</p>
+        <a href="#">셋째</a> 
+        <!--반드시 인접해야한다-->
+        <p>둘째</p>
+    </div>
+</body>
+</html>

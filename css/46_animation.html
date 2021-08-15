@@ -1,0 +1,84 @@
+<!-- 
+    css animation
+    요소의 현재 스타일을 다른 스타일로 천천히 변화시킬 수 있다
+    css3에서는 @keyframe규칙을 이용해 애니메이션 효과를 쉽게 적용할 수 있다
+
+    예전에 웹 사이트를 동적으로 만들기 위해서 flash를 많이 이용했었다. 쫄라맨 엽기토끼와 같은 만화영화를 만들때 많이 사용했었다
+    하지만 용랴이 너무 크고 보안에 취약해서 지금은 사용안한다
+    flash에서 keyframe을 이용했었고 지금은 css로 넘어 왔다
+
+    @keyframe
+    시작 : from 0%
+    과정 : 10% 20%,,
+    끝 : to 100%
+
+    animation-name 
+    만든 애니메이션(keyframe)을 지정한다
+
+    animation-fill-mode
+    애니메이션이 끝난 후 어떻게 처리할지 결정
+    : backwards 스타일을 애니메이션이 시작되기전으로 되돌린다
+      forwards 애니메이션 키프레임이 100% 도달했을때의 스타일을 유지
+
+    animation-direction
+    애니메이션의 진행방향을 지정
+    : normal 원래순서로 진행
+      reverse 반대순서로 진행
+      alternate 정해진 순서로 진행했다가 다시 반대 순서로 진행
+      alternate-reverse 반대순서로 진행했다가 다시 정해진 순서로 진행
+
+    animation-iteration-count
+    애니메이션을 몇번 반복할지
+    : 숫자 해당 숫자만큼 반복
+      infinate : 무한반복
+
+    animation-duration
+    애니메이션이 지속되는 시간 결정
+
+    transform-perspective(150px)
+    3D환경을 만들기 위해서 사용자의 관점 즉 투영점을 구체화해서 입체감을 부여하는 속성
+    스크린으로부터 해당 px만큼 떨어진 곳에서 관찰자가 바라본다는 근거로 구성한다
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         .box {
+             margin-top: 50px;
+             margin-left: 100px;
+             padding: 20px;
+             height: 60px;
+             animation-name: moving;
+             /* 처음과 끝 프레임을 만들고 duration을 지정하면 프레임 처음과 끝 사이 중간 과정은 알아서 만들어서 보여준다 */
+             animation-duration: 3s;
+             animation-iteration-count: infinite;
+             /* animation-direction: normal; */
+             /* animation-direction: reverse; */
+             /* animation-direction: alternate; */
+             animation-direction: alternate-reverse;
+         }
+         @keyframes moving {
+             from {
+                 width: 200px;
+                 background-color: deepskyblue;
+                 opacity: 0.5;
+                 transform: scale(0.5) rotate(15deg);
+             }
+             to {
+                 width: 400px;
+                 background-color: deeppink;
+                 opacity: 1.0;
+                 transform: scale(1) rotate(0deg);
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <div class="box">
+         <h3>animation</h3>
+     </div>
+ </body>
+ </html>

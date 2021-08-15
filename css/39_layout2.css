@@ -1,0 +1,30 @@
+#container {
+    width: 1000px;
+    margin: 0 auto;
+}
+div {
+    padding: 20px;
+    border: 1px solid gray;
+}
+#header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#sidebar1 {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+}
+#content {
+    float: left;
+    width: 430px;
+    margin-bottom: 20px;
+}
+#sidebar2 {
+     /* 오른쪽으로 붙으면 사이드-본문 본문-사이드 간격이 달라진다 -> content의 width를 조절하여 같게 만든다 */
+    float: right;
+    width: 200px;
+}
+#footer {
+    clear: both;
+}

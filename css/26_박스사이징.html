@@ -1,0 +1,36 @@
+<!-- 
+    box-sizing 속성
+    width height값에는 padding과 border가 포함되지 않는다
+    따라서 width를 100%로 설정한 경우 padding이나 border 속성을 추가할 수 없다
+    -> box-sizing 속성을 사용하면 해당 요소의 width를 padding과 border를 포함시켜 계산한다
+       content-box content 영역으로 크기를 설정 (기본값)
+       border-box 테두리를 기준으로 크기를 설정. 패딩과 테두리를 포함한 크기가 요소의 크기가 된다
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         div {
+         width: 300px;
+         height: 150px;
+         margin: 10px;
+         padding: 30px;
+         border: 3px solid yellowgreen;    
+     }
+     .box1 {
+         box-sizing: content-box;
+     }
+     .box2 {
+         /* width = border + padding + content 크기 */
+         box-sizing: border-box;
+     }
+     </style>
+ </head>
+ <body>
+     <div class="box1">contentbox</div>
+     <div class="box2">borderbox</div>
+ </body>
+ </html>

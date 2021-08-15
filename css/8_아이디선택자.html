@@ -1,0 +1,41 @@
+<!--
+    아이디선택자(#)
+    웹 문서안에 특정 부분에 스타일을 지정할때 사용
+    "#"기호를 사용하여 id속성을 가진 요소에 스타일을 적용
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            background-color: darkturquoise;
+            padding: 20px;
+            width: 600px;
+            height: 300px;
+            /*
+            블록요소 가운데 정렬하기
+            0은 위아래 auto는 좌우 margine을 지정
+            auto : 양쪽을 동일하게 -> 가운데 정렬
+
+            인라인요소는 text-align으로 가운데 정렬
+            */
+            margin: 0 auto;
+        }
+        #header {
+            background-color: indianred;
+            padding: 20px;
+            width: 600px;
+            height: 100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>아이디 선택자</h2>
+    <div id="container">div 첫번째 영역</div>
+    <div id="header">div 두번째 영역</div>
+</body>
+</html>

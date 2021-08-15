@@ -1,0 +1,61 @@
+<!--
+    가상클래스
+    css스타일을 주기 위해 클래스를 추가할 필요없이 요소 중에서 순서에 따라 원하는 특정 요소를 선택
+    <ul>
+      <li>사과</li>
+      <li>오렌지</li>
+      <li>딸기</li>
+   </ul>
+   li:first-child li요소즁에 첫째 자식에 해당하는 요소에 스타일 적용
+   li:last-child li요소중에 막내에 해당하는 요소에 스타일 적용
+   li:nth-child(n) li요소중에 n번째 자식 요소에 해당하는 요소에 스타일 적용
+   li:nth-child(odd) li요소중에 홀수번째 자식에 해당하는 요소에 스타일 적용
+   li:nth-child(even) li요소중에 짝수번째 자식에 해당하는 요소에 스타일 적용
+
+   가상요소
+   ::first-line 해당 가상요소는 텍스트의 첫번째 줄에만 스타일을 적용
+   ::first-letter 해당 가상요소는 텍스트의 첫번째 문자에만 스타일 적용
+   ::before 보통 글이나 이미지 그라데이션 등을 요소 앞에 삽입할때 사용
+   ::after 보통 글이나 이미지 그라데이션 등을 요소 뒹 삽입할때 사용
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list1 li:first-child {color: teal;}
+        .list1 li:last-child {color: tomato;}
+        .list2 li:nth-child(2) {color: violet;}
+        .list2 li:nth-child(even) {color: yellowgreen;}
+        .list2 li:nth-child(odd) {color: crimson;}
+
+        /*문자앞에 한꺼번에 이미지나 특수문자를 삽입할때 이용*/
+        .txt1::before{content:"★"}
+        .txt2::after{content: "♬"}
+
+        .letter::first-line{color: darkgoldenrod;}
+        .letter::first-letter{color: darkgray;}
+    </style>
+</head>
+<body>
+    <p class="letter">css 가상클래스</p>
+    <ul class="list1">
+        <li>딸기</li>
+        <li>복숭아</li>
+        <li>포도</li>
+        <li>키위</li>
+    </ul>
+
+    <p class="txt1">before</p>
+    <p class="txt2">after</p>
+
+    <ul class="list2">
+        <li>엄마는 외계인</li>
+        <li>민트초코</li>
+        <li>아몬드봉봉</li>
+        <li>쿠키앤크림</li>
+    </ul>   
+</body>
+</html>

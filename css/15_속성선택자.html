@@ -1,0 +1,49 @@
+<!--
+    속성선택자
+    html요소에서 src href style..과 같은 속성을 선택자로 선택할 수 있다
+    "="기호를 중심으로 여러 특수문자 조합에 따라 종류가 나뉜다
+
+    [attribute] attribute를 갖고 있는 요소 선택
+
+    [attribure = "value"] 속성값이 value와 정확히 일치 & 다른 속성값 x
+    [attribute ~= "value"] 속성값이 value와 정확히 일치 & 다른 속성값 o/x
+
+    [attribute |= "value"] 속성값이 value와 정확히 일치 & 다른 속성값 x or 속성값이 value와 '-'로 연결된 문자 & 다른 속성값 o/x & 속성값이 value로 시작
+
+    [attribute ^= "value"] 속성값이 value와 정확히 일치 x & 다른 속성값 o/x & 속성값이 value로 시작
+    [attribute $= "value"] 속성값이 value와 정확히 일치 x & 다른 속성값 o/x & 속성값이 value로 끝남
+    [attribute *= "value"] 속성값이 value와 정확히 일치 x & 다른 속성값 o/x & 속성값이 value로 포함
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [href] {text-decoration: none; color: darkviolet;}
+        h2[title]{text-align: center; color: deepskyblue;}
+
+         /* [title="css"] {color: red;} 
+         [title ~= "css"] {color:orange;}  */
+         [title |= "css"] {color:yellow;} 
+         /* [title ^= "css"] {color: green;} 
+         [title $= "css"] {color:blue;}  
+         [title *= "css"] {color:purple;}  */
+    </style>
+</head>
+<body>
+    <h2 title="title">속성 선택자</h2>
+    <p><a href="http://www.naver.com">naver</a></p>
+
+    <p title="css">독립적인 단어</p>
+    <p title="funny-css">하이폰이 들어간 합성어</p>
+    <p title="css-funny">하이폰이 들어간 합성어</p>
+    <p title="css-funny funny">하이폰이 들어간 합성어</p>
+    <p title="funny_css">언더바가 들어간 합성어</p>
+    <p title="funny css">공백으로 연결된 단어(접미사)</p>
+    <p title="css funny">공백으로 연결된 단어(접두사)</p>
+    <p title="funnycss">공백이 없는 단어(접미사)</p>
+    <p title="cssfunny">공백이 있는 단어(접두사)</p>
+</body>
+</html>

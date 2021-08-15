@@ -1,0 +1,35 @@
+<!--
+    박스모델(box model)
+    모든 html 요소는 박스형태이다. 이것을 박스모델이라고 부른다
+    박스모델은 html요소를 padding border margin content로 구분한다
+
+    content
+    :텍스트나 이미지가 들어 있는 박스의 실질적인 내용
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-model</title>
+    <style>
+        /* 
+        f12눌러서 영역확인
+        width와 height는 content의 크기이다
+        실제로 눈에 보이는건 padding과 border도 포함되서 설정한 width보다 커보인다
+        */
+        div {
+            width: 400px;
+            height: 200px;
+            margin: 10px;
+            border: 3px solid slateblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>box model</h2>
+    <div>요소의 크기</div> 
+</body>
+</html>

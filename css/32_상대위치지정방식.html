@@ -1,0 +1,40 @@
+<!-- 
+    요소의 위치를 결정하는 방식 - 상대위치(relative position) 지정방식
+    html 요소의 기본 위치를 기준으로 위치를 재설정하는 방식
+    html 요소의 기본 위치란, 정적위치 지정방식일때 결정되는 위치를 의미
+    절대지정방식을 이용하기 위해서 많이 이용 -> 조상요소의 위치를 지정
+    
+    top : 정적위치인 요소의 top으로부터 몇px 떨어진 곳을 요소의 top으로 지정
+    left : 정적위치인 요소의 left으로부터 몇px 떨어진 곳을 요소의 left으로 지정
+    right : 정적위치인 요소의 right으로부터 몇px 떨어진 곳을 요소의 right으로 지정
+    bottom : 정적위치인 요소의 bottom으로부터 몇px 떨어진 곳을 요소의 bottom으로 지정
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         .relative1 {
+             width: 200px;
+             background-color: burlywood;
+             margin-left: 50px;
+             padding: 20px;
+         }
+         .relative2 {
+             position: relative;
+             width: 200px;
+             background-color: cadetblue;
+             padding: 20px;
+             top: 100px;
+             left: 100px;
+         }
+     </style>
+ </head>
+ <body>
+     <h2>상대위치 지정방식</h2>
+     <div class="relative1">상대위치 지정방식</div>
+     <div class="relative2">상대위치 지정방식</div>
+ </body>
+ </html>

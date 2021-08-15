@@ -1,0 +1,42 @@
+<!--
+    전체선택자(*)
+    스타일을 모든 요소에 적용할때 사용
+
+    한번에 많은 요소를 선택하고 한꺼번에 스타일을 적용
+    -> 너무 많은 요소가 있는 html문서일 경우 부하를 줄 수 있다
+       스타일을 랜더링할때 버벅거려 브라우저를 띄울때 버벅거릴 수 있다
+
+    * {padding:0; margine:0}
+    처음에 모든 요소를 일정하게 초기화시키기 위해 사용
+    요소에 따라 margine 이나 그런게 다 다르니까 기본적으로 0으로 만들고 각 요소에 스타일을 적용
+    -> css가 스타일 속성을 적용할때 덮어쓰기하기 때문에 가능
+       단, 무조건 나중에 쓴게 적용되는거 아니다
+       -> 점수제를 통해 스타일적용 우선순위를 정한다
+       -> 디테일한 스타일은 전체 선택자와 body에 적용한 스타일보다 우선시한다
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {color: mediumvioletred;}
+        h2 {color: olive;}
+        /*
+        h2 {color: olive;}
+        * {color: mediumvioletred;}
+        스타일 속성은 덮어쓰기한다는 점을 고려하면 전체가 mediumvioletred가 나와야 하는데 h2는 olive가 나온다
+        디테일한 스타일의 우선순위가 높기 때문이다
+        */
+    </style>
+</head>
+<body>
+    <h2>전체 선택자</h2>
+    <p>전체 선택자는 *기호를 사용합니다</p>
+    <ol>
+        <li>전체 선택자는 한버에 많은 요소를 선택한다</li>
+        <li>너무 많은 요소가 있는 html문서인경우 부하가 발생할 수 있다</li>
+    </ol>
+</body>
+</html>

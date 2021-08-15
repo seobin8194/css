@@ -1,0 +1,32 @@
+<!--
+    상속은 부모에게 적용한 스타일 속성이 자식 요소에게 적용되는 것을 말한다
+    https://www.w3.org/TR/CSS22/propidx.html
+    이 문서에서 inherted가 yes인 속성을 부모 요소에 적용하면 자식에게도 적용된다 (예 color)
+    inherted가 no인 속성을 부모에게 적용하면 부모에게만 적용되고 부모안에 포함된 자식에게는 적용 안된다(예 border padding)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /*color 속성은 부모 요소에 적용하면 자식에게 상속되어 자식 요소에게도 적용된다*/
+            color :palevioletred;
+            /*border와 padding 속성은 부모 요소에 적용하면 자식요소에게 적용안된다. color와 달리 자식에게 상속되지 않는 속성이다*/
+            border :30px dotted darkseagreen;
+            padding :50px;
+        }
+        h2 {border :3px darkslateblue solid;}
+    </style>
+</head>
+<body>
+    <h2>상속</h2>
+    <div>
+        div영역
+        <h2>상속이란</h2>
+        <p>부모 요소의 속성값이 자깃요소에게 적용되는 속성 스타일입니다</p>
+    </div>   
+</body>
+</html>

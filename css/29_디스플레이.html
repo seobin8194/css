@@ -1,0 +1,77 @@
+<!-- 
+    display
+    웹 페이지의 레이아웃을 결정하는 속성
+    block
+    :display 속성값이 block인 요소는 언제나 새로운 라인에서 시작하고 해당 라인의 모든 너비를 차지한다
+    inline
+    :display 속성값이 inline인 요소는 새로운 라인에서 시작하지 않는다. 또한 너비도 해당 라인 전체가 아닌 해당 html 요소의 content만큼만 차지한다
+    inline-block
+    :인라인 블록에서는 아래와 같은 기능을 사용할 수 있다
+     -width와 height를 설정할 수 있다
+     -margin과 padding을 설정할 수 있다
+     -line-height를 적용할 수 있다
+    none
+    :웹 페이지에서 해당 요소가 나타나지 않고 레이아웃에서 사라진다
+     visibility:hidden -> 해당 요소를 웹 페이지에 나타내지 않는다. 여전히 웹 페이지 레이아웃에서는 존재
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+        div {
+             margin: 20px;
+             padding: 10px;
+             border: 3px solid violet;
+             border-radius: 20px;
+         }
+        #inline img {margin: 10px;}
+        #block img {
+            margin: 10px;
+            display: block;
+        }
+        #inline-block div{
+            display: inline-block;
+            width: 300px;
+            height: 30px;
+            padding: 20px;
+            margin: 20px;
+        }
+        /* 
+        아이디 중복체크할때 많이 이용
+        중복체크가 완료되면 자리가 생기면서 "아이디가 중복되었습니다" 메시지가 뜸
+         */
+        p.none { display: none;}
+        /* 자리가 빈줄로 있다가 중복체크가 완료되면 빈자리에 "아이디가 중복되었습니다" 메시지가 뜸 */
+        p.hidden {visibility: hidden;}
+    
+     </style>
+ </head>
+ <body>
+     <div id="inline">
+         <img src="./snow.png">
+         <img src="./snow.png">
+         <img src="./snow.png">
+     </div>
+     <div id="block">
+        <img src="./snow.png">
+        <img src="./snow.png">
+        <img src="./snow.png">
+    </div>
+    <div id="inline-block">
+        <div>영역1</div>
+        <div>영역2</div>
+        <div>영역3</div>    
+    </div>
+    <div>
+        <p>display:none</p>
+        <p class="none">display"none</p>
+    </div>
+    <div>
+        <p>visibility:hidden</p>
+        <p class="hidden">visibility:hidden</p>
+    </div>    
+ </body>
+ </html>

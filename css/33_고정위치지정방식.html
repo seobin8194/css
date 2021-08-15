@@ -1,0 +1,48 @@
+<!-- 
+    요소의 위치를 결정하는 방식 - 고정위치(fixed position) 지정방식
+    뷰포트를 기준으로 설정하는 방식
+    웹 페이지가 스크롤되어도 고정위치로 지정된 요소는 항상 같은 곳에 위치한다
+    메뉴나 배너만들때 이용 -> 스크롤되도 계속 보이게
+    <<<뷰포트>>>
+    브라우저들은 뷰포트로 알려진 가상랜더링 화면을 가지고 있다
+    즉 화면 디스플레이 상에서 표시 영역
+    데스크탑의 뷰포트는 브라우저 창의 뷰포트와 같고 사용자가 브라우저의 창 크기를 조절하면 뷰포트의 크기도 조절된다
+    반면 모바일 뷰포트는 상하좌우 스크롤이 움직이거나 줌인 줌아웃을 통해 뷰포트를 변경한다
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         #fx {
+             position: fixed;
+             /* 스크린의 테두리로부터 */
+             top: 10px;
+             right: 10px;
+             width: 50px;
+             height: 150px;
+             background-color: coral;
+         }
+         #content {
+             width: 800px;
+         }
+         p {line-height: 30px;}
+     </style>
+ </head>
+ <body>
+     <div id="fx"></div>
+     <div id="content">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque quia, assumenda, possimus, earum minima aut perferendis eligendi tempore numquam molestiae modi veniam aperiam perspiciatis impedit ipsam suscipit! Deserunt, minima?</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque quia, assumenda, possimus, earum minima aut perferendis eligendi tempore numquam molestiae modi veniam aperiam perspiciatis impedit ipsam suscipit! Deserunt, minima?</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque quia, assumenda, possimus, earum minima aut perferendis eligendi tempore numquam molestiae modi veniam aperiam perspiciatis impedit ipsam suscipit! Deserunt, minima?</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque quia, assumenda, possimus, earum minima aut perferendis eligendi tempore numquam molestiae modi veniam aperiam perspiciatis impedit ipsam suscipit! Deserunt, minima?</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque quia, assumenda, possimus, earum minima aut perferendis eligendi tempore numquam molestiae modi veniam aperiam perspiciatis impedit ipsam suscipit! Deserunt, minima?</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque quia, assumenda, possimus, earum minima aut perferendis eligendi tempore numquam molestiae modi veniam aperiam perspiciatis impedit ipsam suscipit! Deserunt, minima?</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque quia, assumenda, possimus, earum minima aut perferendis eligendi tempore numquam molestiae modi veniam aperiam perspiciatis impedit ipsam suscipit! Deserunt, minima?</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque quia, assumenda, possimus, earum minima aut perferendis eligendi tempore numquam molestiae modi veniam aperiam perspiciatis impedit ipsam suscipit! Deserunt, minima?</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eaque quia, assumenda, possimus, earum minima aut perferendis eligendi tempore numquam molestiae modi veniam aperiam perspiciatis impedit ipsam suscipit! Deserunt, minima?</p>
+     </div>    
+ </body>
+ </html>

@@ -1,0 +1,37 @@
+<!-- 
+    미디어쿼리
+    반응형 웹 사이트
+    width height color 속성과 같은 미디어관련 표현식을 통해 스타일이 적용되는 범위를 조절할 수 있다
+    미디어쿼리를 이용하면 콘텐츠를 별도로 변경하지 않아도 웹 페이지에 접속하는 기기에 맞는 형태로 스타일을 조절할 수 있다
+
+    @media 매체유형 and (표현식) {css 코드}
+    매체유형
+    all : 모든 매체
+    print : 프린터 기기
+    screen : 컴퓨터 테플릿 스마트폰
+    speech : 스크린 리더
+    @media screen and (min-width:1024px){
+        background-color:red
+    }
+    => 화면이 1024보다 커지면 배경색을 바꿔라
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: deepskyblue;
+        }
+        @media screen and (min-width:1024px){
+            body {background-color: firebrick;}    
+        }
+    </style>
+</head>
+<body>
+    <h2>미디어쿼리</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione iste esse nulla possimus, dignissimos consequuntur eum repellat optio atque libero minus expedita natus blanditiis facere facilis id, nihil praesentium aut!</p>  
+</body>
+</html>

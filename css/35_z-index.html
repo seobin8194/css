@@ -1,0 +1,51 @@
+<!-- 
+    z-index
+    html 요소의 위치를 설정하게 되면 설정하는 방식에 따라 겹칠 수 있는데 겹치는 요소들이 쌓이는 스택의 순서를 설정할 수 있다
+    정적위치 지정방식은 요소가 절대 겹치지지 않고 픽셀로 위치를 지정하는 경우에 요소들이 겹칠 수 있다
+    스택 순서는 양수나 음수 모두 시용할 수 있고 크기가 클 수록 위에 위치하고 작을수록 아래 위치한다
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+        div.wrapper {
+            position: relative;
+        }
+        div.box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 10x solid teal;
+            font-size: 25px;
+        }
+        #b1 {
+            left: 50px;
+            top: 50px;
+            background-color: blueviolet;
+            z-index: 10;
+        }
+        #b2 {
+            left: 120px;
+            top: 70px;
+            background-color: cadetblue;
+            z-index: 100;
+        }
+        #b3 {
+            left: 70px;
+            top: 110px;
+            background-color: cornflowerblue;
+            z-index: 50;
+        }
+     </style>
+ </head>
+ <body>
+     <div class="wrapper">
+        <div id="b1" class="box">box1</div>
+        <div id="b2" class="box">box2</div>
+        <div id="b3" class="box">box3</div>
+    </div>
+ </body>
+ </html>

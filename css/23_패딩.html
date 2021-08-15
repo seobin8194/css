@@ -1,0 +1,45 @@
+<!-- 
+     padding
+    :content와 border사이의 간격
+     padding-top 위쪽 여백 padding-right 오른쪽 여백 padding-bottom 아래쪽 여백 padding-left 왼쪽 여백
+     padding 모든 방향의 패딩을 한꺼번에 설정. 방향은 상단부터 시작해서 시계방향으로 설정
+     - padding:20px 50px 30px 10px 상단->오른쪽->하단->왼쪽 순서로 패딩 적용
+     - padding:20px 50px 30px 상단 20 오른쪽/왼쪽 50 하단 30
+     - padding:20px 50px 상단/하단 20 오른쪽/왼쪽 50
+     - padding:20px 상하좌우 20
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         div {
+             width: 200px;
+             height: auto;
+             background-color: tan;
+             display: inline-block;
+             margin: 20px;
+             color: chocolate;
+         }
+         #pad1 {padding: 10px 30px 10px 30px; }
+         #pad2 {padding: 10px 30px 10px;}
+         #pad3 {padding: 10px 30px;}
+         #pad4 {padding: 20px;}
+         #pad5 {
+             padding-top: 10px;
+             padding-right: 20px;
+             padding-bottom: 10px;
+             padding-left: 20px;
+         }
+     </style>
+ </head>
+ <body>
+     <div id="pad1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, et tenetur. Tempora aspernatur quasi obcaecati et, facilis quam cum aut adipisci asperiores. Dignissimos, soluta dolorem? Impedit iusto a expedita pariatur!</div>
+     <div id="pad2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis qui minima provident reiciendis deleniti a aliquam quos eius! Rerum minima velit debitis, sunt quasi id voluptate maxime corporis illum magnam.</div>
+     <div id="pad3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex laborum fuga quidem sapiente quisquam tempore unde eum nulla itaque consequuntur sunt consequatur iusto necessitatibus enim, in cupiditate eligendi quasi?</div>
+     <div id="pad4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex laborum fuga quidem sapiente quisquam tempore unde eum nulla itaque consequuntur sunt consequatur iusto necessitatibus enim, in cupiditate eligendi quasi?</div>
+     <div id="pad5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex laborum fuga quidem sapiente quisquam tempore unde eum nulla itaque consequuntur sunt consequatur iusto necessitatibus enim, in cupiditate eligendi quasi?</div>
+ </body>
+ </html>

@@ -1,0 +1,50 @@
+<!-- 
+    요소의 위치 지정방식 - 절대위치(absolute position) 지정방식
+    뷰포트를 기준으로 위치를 지정하는 고정위치 지정방식과 비슷하게 동작함
+    단지 뷰포트만을 기준으로 하는게 아니라 조상 요소를 기준으로도 결정할 수 있음
+    만약 위치가 설정된 조상요소를 가지지 않으면 body(전체 화면, 뷰포트) 요소를 기준으로 위치를 결정
+    -> 위치가 설정된 조상요소라는 것은 정적위치 지정방식을 제외한 방식(relative fixed absolute)로 위치가 설정된 조상요소를 의미
+
+    홈페이지 section을 나누고 각 section에 들어 갈 요소들의 위치는 절대지정방식을 이용하여 위치시킨다
+    -> 만약 각 section에 들어가는 요소들을 전체 화면을 기준으로 위치시키면 화면의 크기를 조절할때 section을 벗어난다
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         /* 절대지정방식을 적용하기 위해서는 부모 위치지정방식이 staic이 아니여야 한다 
+         relative 방식으로 지정하고 top right bottom left를 지정하지 않으면 정적지정방식과 똑같다 */
+         #web {
+             position: relative;
+             width: 500px;
+             height: 500px;
+             border: 3px solid springgreen;
+         }
+         .b {
+             position: absolute;
+             width: 50px;
+             height: 50px;
+             background-color: tomato;
+             /* 모든 애들이 왼쪽 상단에 겹쳐 있다
+             top left bottom right을 지정해야 그때부터 움직인다 */
+         }
+         #ab1 {top: 0; right: 0}
+         #ab2 {bottom: 0; left: 0;}
+         #ab3 {bottom: 0; right: 0;}
+         #ab4 {top: 100px; left: 150px;}
+         #ab5 {top: 0; left: 50px;}
+     </style>
+ </head>
+ <body>
+     <div id="web">
+        <div class="b" id="ab1"></div>
+        <div class="b" id="ab2"></div>
+        <div class="b" id="ab3"></div>
+        <div class="b" id="ab4"></div>
+        <div class="b" id="ab5"></div>   
+     </div>
+ </body>
+ </html>

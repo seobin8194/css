@@ -1,0 +1,64 @@
+<!-- 
+    css 우선순위
+    0. !important가 적용된 순서
+    1. 인라인(여소에 지접 style 속성을 적용) : 1000점
+    2. id:100점 class나 속성 선택자:10점 element:1점
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #id-style-with-important {background-color: yellow !important;}
+        /* 나중에꺼 적용하는거 아님 */
+        /* #id-style-2 {
+            background-color: skyblue;
+            margin: 50px;
+            padding: 50px;
+        } */
+        #id-style {background-color: blue;}
+        .class-style {background-color: red;}
+        div {
+            display: block;
+            padding: 30px;
+            margin: 30px;
+            background-color: white;
+        }
+        div {
+            background-color: purple;
+        }
+        #id-style-2 {
+            background-color: skyblue;
+            margin: 50px;
+            padding: 50px;
+        }
+        /* 나중에꺼 적용하는거 아님 */
+        /* ul > li.li-class{
+            background-color: salmon;
+            color: deeppink;
+        } */
+        ul {color: black;} /*1점*/
+        ul > li {color: aqua;} /*2점*/
+        ul > li.li-class{ /*12점*/
+            background-color: s
+            almon;
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <h2>css 우선순위 계산</h2>
+    <div id="id-style-with-important" style="background-color: green;" id="id-style" class="class-style">div1</div> <!--yellow !important-->
+    <div style="background-color: green;" id="id-style" class="class-style">div2</div> <!--green inline 스타일적용-->
+    <div id="id-style">div3</div> <!--purple이 아닌 blue id스타일의 점수 적용 우선:100점-->
+    <div class="class-style">div4</div> <!--purple이 아닌 red class 스타일의 점수 적용 우선-->
+    <div>div5</div> <!--purple 마지막 적용된 스타일이 적용-->
+    <div id="id-style-2" id="id-style" >div6</div> <!--skyblue 아이디나 class속성은 요소 내에서 먼저 나온 스타일이 우선 적용-->
+    <ul>
+    <li class="li-class">li 1</li> <!--salmon-->
+    </ul>   
+</body>
+</html>

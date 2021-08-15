@@ -1,0 +1,120 @@
+*  {
+    margin: 0;
+    padding: 0;
+    /* 
+    모바일에서는 width를 주로 100%로 지정
+    모바일은 해상도가 워낙 다양해서 픽셀로 지정하면 많이 흐트러진다
+    */
+    box-sizing: border-box;
+}
+#container {
+    width: 100%;  
+}
+header {
+    width: 100%;
+    background-color: black;
+}
+/* 목록태그 -> 메뉴형태로 만들기 */
+nav ul {
+    height: 50px;
+    list-style: none;
+    color: white;
+}
+nav li {
+    margin: 5px 5px;
+    padding: 10px;
+    float: left;
+}
+nav, #content {
+    /* 
+    모바일 폰 크기로 만든다
+    구형폰 : 가로 320px
+    현재 폰 : 가로 360px ~ 375px
+    사이즈를 320보더 크게만들면 구형폰에서 가로 스크롤이 생긴다
+     */
+    width: 310px;
+    margin: 0 auto;
+}
+#intro {
+    width: 100%;
+    margin-bottom: 20px;
+}
+#intro img {
+    width: 100%;
+    padding: 10px;
+}
+#desc {
+    width: 100%;
+    padding: 10px;
+}
+footer {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+footer p {
+    text-align: center;
+    line-height: 10px;
+}
+
+/* 
+일반적으로 테블릿은 모바일과 같은 레이아웃을 사용하지만 필요시 768px  기준으로 작업한다 
+*/
+@media screen and (min-width:768px){
+    nav, #content {
+        width: 750px;
+        margin:  0 auto;
+    }
+    #intro {
+        width: 100%;
+    }
+    /* !!이미지가 왜 오른쪽에 나오는지 모르겠음!! */
+    #intro img {
+        width: 20%;
+        padding: 10px;
+    }
+    #desc {
+        width: 100%;
+        padding: 0;
+        margin: 10px auto;
+    }
+    footer {
+        height: 70px;
+        padding: 30px;
+        background-color: deepskyblue;
+    }
+}
+
+/* 데스크탑 가로 사이즈 : 1000px ~ 1280px */
+@media screen and (min-width:1024px){
+    nav, #content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #intro img {
+        width: 20%;
+        padding: 10px;
+        float: left;
+    }
+    #desc {
+        display: inline-block;
+        width: 250px;
+        height: auto;
+        padding: 10px;
+        border: 3px dashed green;
+        margin-left: 10px;
+        margin-bottom: 20px;
+
+    }
+    footer {
+        clear: both;
+        height: 100px;
+        background-color: green;
+        padding: 50px;
+    }
+    footer p {
+        line-height: 5px;
+    }
+}

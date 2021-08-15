@@ -1,0 +1,25 @@
+#container {
+    width: 1000px;
+    margin: 0 auto;
+}
+div {
+    padding: 20px;
+    border: 1px solid gray;
+}
+#header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+#content {
+    float: left;
+    width: 700px;
+    
+}
+#sidebar {
+    float: right;
+    width: 200px;
+    margin-bottom: 20px;
+}
+#footer {
+    clear: both;
+}

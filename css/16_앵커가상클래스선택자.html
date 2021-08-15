@@ -1,0 +1,29 @@
+<!--
+    앵커가상클래스 선택자
+    앵커 요소에 특정 디자인을 입혀 주는 동적인 스타일을 만들어 준다
+    :hover 사용자가 해당 요소에 커서를 올렸을때 스타일을 적용
+    :active 요소가 활성화되었거나 클릭했을때(클릭하고 손 떼기전) 스타일을 적용
+    :visited 사용자가 해당 링크를 다녀왔을때 스타일을 적용(방문후)
+    :link 해당 요소에 하이퍼링크가 적용됐을때(방문전)
+    :focus 해당요소에 키보드 포커스가 맞춰져 있을때(커서가 깜빡이고 있을때) 스타일을 적용 -> form 태그에서 많이 쓰인다
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {color: burlywood;text-decoration: none;}
+        a:visited {color: chartreuse;text-decoration: none;}
+        a:hover {color: aquamarine;text-decoration: underline;}
+        a:active {color: aquamarine;text-decoration: chocolate;}
+        #user:focus {background-color: tomato;}
+
+    </style>
+</head>
+<body>
+    <p><a href="http://node.js.org">node</a></p>
+    <p><input type="text" id="user"></p>
+</body>
+</html>

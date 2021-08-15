@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-color: deeppink;
+            animation-name: sample;
+            animation-duration: 4s;
+            /* animation-fill-mode: forwards; */
+            animation-fill-mode: backwards;
+        }
+        @keyframes sample {
+            0% {
+                background-color: indigo;
+                transform: translate(0,0);
+            }
+            50% {
+                background-color: lightcoral;
+                transform: translate(500px,500px);
+            }
+            100% {
+                background-color: yellowgreen;
+                transform: translate(0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- animation-fill-mode -->
+    <p>animation</p>
+</body>
+</html>
